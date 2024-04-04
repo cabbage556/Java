@@ -5,15 +5,18 @@ public class Calculator {
     public static void main(String[] args) {
         System.out.println("Calculator.main");
 
-        // 기본 생성자로 Calculator 인스턴스 생성
-        //      클래스 내부에 생성자가 존재하지 않지만 컴파일 시 기본 생성자가 자동으로 클래스 파일 안에 추가되므로 인스턴스를 생성할 수 있음
+        // Calculator 객체 / 인스턴스 생성
+        //      컴파일 시 기본 생성자가 자동으로 클래스 파일 안에 추가되므로 기본 생성자 사용 가능
+        //      생성자를 아무것도 작성하지 않으면 컴파일할 때 클래스 파일 안에 자동으로 기본 생성자가 추가됨
         Calculator calc = new Calculator();
+
         int a = 10, b = 5;
         System.out.println("add = " + calc.add(a, b));
         System.out.println("subtract = " + calc.sub(a, b));
         System.out.println("multiply = " + calc.mul(a, b));
         System.out.println("divide = " + calc.div(a, b));
     }
+
     public int add(int num1, int num2) {
         return num1 + num2;
     }
