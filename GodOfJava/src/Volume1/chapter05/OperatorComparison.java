@@ -20,11 +20,12 @@ public class OperatorComparison {
 
     public void comparison2() {
         // 기본 자료형의 비교
-        //      같은 종류끼리의 비교는 가능
-        //          숫자 타입은 숫자 타입끼리 비교 가능
-        //          boolean 타입은 boolean 타입끼리 비교 가능
-        //      다른 종류끼리의 비교는 불가능
+        //      같은 종류끼리 비교 가능
+        //          숫자 타입은 숫자 타입끼리
+        //          boolean 타입은 boolean 타입끼리
+        //      다른 종류끼리 비교 불가능
         //          숫자 타입과 boolean 타입 비교 불가능
+
         // char 타입의 값과 int 타입의 값 비교
         char charValue = 'a';
         System.out.println("'a' == 97: " + (charValue == 97));

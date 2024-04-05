@@ -16,7 +16,14 @@ public class PrimitiveTypesSecond {
     }
 
     public void defaultValues() {
-        // 인스턴스 변수의 기본값 확인
+        // 인스턴스 변수의 기본값
+        //      정수 타입
+        //          char 타입을 제외한 나머지 정수 타입의 기본값: 0
+        //          char 타입의 기본값: '\u0000'
+        //      소수 타입
+        //          float, double: 0.0
+        //      boolean 타입
+        //          false
         System.out.println("byteDefault = " + byteDefault);
         System.out.println("shortDefault = " + shortDefault);
         System.out.println("intDefault = " + intDefault);

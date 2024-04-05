@@ -9,6 +9,8 @@ public class OperatorComplement {
     public void complement() {
         // ! 연산자
         //      boolean 타입에만 사용 가능
+        //      !true -> false
+        //      !false -> true
         boolean flag = true;
         System.out.println(flag);
         System.out.println(!flag);

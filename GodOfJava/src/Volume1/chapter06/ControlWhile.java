@@ -12,6 +12,8 @@ public class ControlWhile {
     public void whileLoop1() {
         ControlOfFlow control = new ControlOfFlow();
         int loop = 0;
+
+        // while문 소괄호 안에는 boolean 결과값이 있어야 함
         while (loop < 12) {
             loop++;
             control.switchCalendar(loop);
@@ -54,11 +56,12 @@ public class ControlWhile {
         }
     }
 
-    // if (...) continue;에 의해 무한 루프 실행 -> 자바 프로세스가 종료될 때까지 계속 반복됨
     public void whileContinueInfinite() {
         ControlOfFlow control = new ControlOfFlow();
         int loop = 0;
         while (loop < 12) {
+            // 무한 루프 실행
+            //      자바 프로세스가 종료될 때까지 계속 반복됨
             if (loop == 6) {
                 continue;
             }
