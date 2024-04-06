@@ -16,7 +16,9 @@ public class ReferencePass {
         System.out.println("b = " + b);  // b
 
         // 기본 자료형: pass by value
+        //      값을 복사해 매개 변수에 전달
         // 참조 자료형: pass by reference
+        //      참조값을 복사해 매개 변수에 전달
         passByValue(a, b);
 
         System.out.println("after passByValue");
@@ -26,7 +28,7 @@ public class ReferencePass {
 
     public void passByValue(int a, String b) {
         a = 20;
-        b = "z";  // 매개 변수를 새로운 객체로 대체하면 새로운 객체의 참조값이 할당됨
+        b = "z";  // new String("z")와 같음 -> 매개 변수에 새로운 객체의 참조값이 할당됨
         System.out.println("in passByValue");
         System.out.println("a = " + a);  // 20
         System.out.println("b = " + b);  // z
@@ -38,6 +40,8 @@ public class ReferencePass {
         System.out.println("before passByReference");
         System.out.println("member.name = " + member.name);  // Sangmin
 
+        // 참조 자료형: pass by reference
+        //      참조값을 복사해 매개 변수에 전달
         passByReference(member);
 
         System.out.println("after passByReferece");

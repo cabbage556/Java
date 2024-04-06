@@ -8,7 +8,7 @@ public class ReferenceStaticVariable {
     public ReferenceStaticVariable(String name) {
         // 객체 생성 시 클래스 변수 name의 값을 설정함
         //      마지막으로 객체를 생성할 때 전달한 name 매개 변수의 값이 클래스 변수에 할당됨
-        this.name = name;
+        ReferenceStaticVariable.name = name;
     }
 
     public static void main(String[] args) {

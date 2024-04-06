@@ -7,6 +7,9 @@ public class ArrayLotto {
     }
 
     public void init() {
+        // int 타입 배열 선언 및 초기화
+        //      배열은 참조 자료형이므로 new를 사용해 초기화할 수 있음
+        //      초기화 시 배열의 크기를 지정해야 함
         int[] lottoNumbers = new int[7];
         lottoNumbers[0] = 5;
         lottoNumbers[1] = 12;

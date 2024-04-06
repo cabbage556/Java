@@ -7,7 +7,7 @@ public class ReferenceConstructor {
     }
 
     public void makeMemberObject() {
-        // 네 가지 생성자를 활용해 객체 생성
+        // 네 가지 생성자를 활용해 객체 4개 생성
         //      객체들은 서로 다른 속성 값들을 갖게 됨
         MemberDTO dto1 = new MemberDTO();
         MemberDTO dto2 = new MemberDTO("Sangmin");

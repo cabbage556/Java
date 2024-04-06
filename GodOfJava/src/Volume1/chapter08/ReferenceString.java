@@ -8,12 +8,16 @@ public class ReferenceString {
     public ReferenceString() {}
 
     // 생성자
+    //      객체(인스턴스)를 생성하기 위해 존재함
+    // 메서드와 다른 점
     //      리턴 타입이 없음
-    //      메서드 이름이 클래스 이름과 같음
+    //      클래스 이름과 동일하게 이름을 지정함
+    // 위치
+    //      인스턴스 변수 아래, 메서드 위
     public ReferenceString(String arg) {}
 
     public static void main(String[] args) {
-        ReferenceString reference = new ReferenceString();  // 기본 생성자 사용
+        ReferenceString reference = new ReferenceString();
     }
 
     public String getString() {

@@ -8,6 +8,7 @@ public class ReferenceReturn {
         System.out.println(reference.stringReturn());
     }
 
+    // 자바의 메서드는 어떤 타입이라도 1개의 값만 리턴할 수 있음
     public int intReturn() {
         int returnInt = 0;
         return returnInt;
