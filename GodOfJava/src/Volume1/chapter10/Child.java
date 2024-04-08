@@ -1,9 +1,10 @@
 package Volume1.chapter10;
 
 // extends Parent: Parent 클래스를 상속(확장)함
-//      Parent 클래스에 선언된 public, protected, package-private 변수, 메서드를 자신의 것처럼 사용할 수 있게 됨
+//      Parent 클래스에서 private으로 선언된 변수, 메서드를 제외한 나머지 변수, 메서드를 자신의 것처럼 사용할 수 있게 됨
 //      만약 Parent 클래스가 다른 패키지에 존재한다면 package-private 변수, 메서드는 사용할 수 없음
 public class Child extends Parent {
+
     public Child() {
         // super()
         // 부모 클래스의 기본 생성자 자동 호출
