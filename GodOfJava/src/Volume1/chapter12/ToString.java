@@ -3,7 +3,7 @@ package Volume1.chapter12;
 public class ToString {
     public static void main(String[] args) {
         ToString thisObject = new ToString();
-        // thisObject.toStringMethod(thisObject);
+        thisObject.toStringMethod(thisObject);
         thisObject.toStringMethod2();
     }
 
@@ -18,13 +18,11 @@ public class ToString {
     }
 
     public void toStringMethod2() {
-        // this: 객체 자기 자신을 참조할 때 사용함
+        // this
+        //      객체 자기 자신을 참조할 때 사용함
+        //      매개 변수로 호출하는 객체를 넘겨줄 필요가 없음
         System.out.println(this);
         System.out.println(this.toString());
         System.out.println("plus: " + this);
-    }
-
-    public String toString() {
-        return "ToString class";
     }
 }

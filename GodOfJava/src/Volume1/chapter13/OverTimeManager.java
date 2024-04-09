@@ -4,7 +4,8 @@ public class OverTimeManager {
     public static void main(String[] args) {
         OverTimeManager manager = new OverTimeManager();
 
-        // enum 클래스의 객체 생성 방법: "enum 이름.상수 이름"
+        // enum 클래스의 객체 생성 방법 간단하게 이해하기
+        //      "enum 이름.상수 이름"
         int myAmount = manager.getOverTimeAmount(OverTimeValues.THREE_HOUR);
         System.out.println("myAmount = " + myAmount);
     }

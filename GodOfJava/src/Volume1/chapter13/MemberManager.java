@@ -5,7 +5,7 @@ package Volume1.chapter13;
 //      interface 키워드 사용
 public interface MemberManager {
     // 인터페이스 내부에 선언한 메서드들은 바디가 존재하면 안 됨
-    public boolean addMember(MemberDTO member);
-    public boolean removeMember(String name, String phone);
-    public boolean updateMember(MemberDTO member);
+    boolean addMember(MemberDTO member);
+    boolean removeMember(String name, String phone);
+    boolean updateMember(MemberDTO member);
 }

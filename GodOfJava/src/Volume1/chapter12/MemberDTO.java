@@ -19,6 +19,7 @@ public class MemberDTO {
 
     // equals() 메서드 오버라이딩
     //      equals() 메서드 오버라이딩 시 지켜야 하는 조건이 있어 직접 오버라이딩하는 것은 권장되지 않음
+    //          hashCode() 메서드와 마찬가지로 IDE의 자동 완성 기능을 활용하는 것이 권장됨
     //      true: equals() 메서드를 호출한 객체와 매개 변수에 전달한 객체가 동일함
     //      false: equals() 메서드를 호출한 객체와 매개 변수에 전달한 객체가 동일하지 않음
     public boolean equals(Object obj) {
@@ -56,8 +57,10 @@ public class MemberDTO {
 
     // hashCode() 메서드 오버라이딩
     //      hashCode() 메서드 오버라이딩 시 지켜야 하는 조건이 있어 직접 오버라이딩하는 것은 권장되지 않음
-    //      equals() 메서드 오버라이딩 시 함께 오버라이딩 필요
-    //          두 객체가 equals() 메서드 결과에 따라 동일하다면, 두 객체에 대한 hashCode() 메서드의 결과도 동일한 정수 값이어야 한다는 조건이 있음
+    //          equals() 메서드와 마찬가지로 IDE의 자동 완성 기능을 활용하는 것이 권장됨
+    //      equals() 메서드 오버라이딩 시 함께 오버라이딩해야 함
+    //          두 객체가 equals() 메서드 결과에 따라 동일한 경우
+    //          두 객체에 대한 hashCode() 메서드의 결과도 동일한 정수 값이어야 한다는 조건이 있음
     public int hashCode() {
         final int prime = 31;
         int result = 1;
