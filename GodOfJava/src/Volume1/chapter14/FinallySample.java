@@ -8,6 +8,12 @@ public class FinallySample {
         sample.finallySample2();
     }
 
+    /*
+    finally 블록
+        예외 발생 여부와 상관 없이 반드시 실행되는 블록
+        코드 중복을 줄이기 위해 필요함
+     */
+
     public void finallySample() {
         int[] intArr = new int[5];
 
@@ -16,7 +22,7 @@ public class FinallySample {
         } catch (Exception e) {
             System.out.println(intArr.length);  // 실행2
         } finally {
-            System.out.println("Here is finally");  // 실행3
+            System.out.println("Here is finally");  // 실행3: 예외가 발생해도 실행됨
         }
 
         System.out.println("This code must run");  // 실행4
@@ -30,7 +36,7 @@ public class FinallySample {
         } catch (Exception e) {
             System.out.println(intArr.length);
         } finally {
-            System.out.println("Here is finally");  // 실행2
+            System.out.println("Here is finally");  // 실행2: 예외가 발생하지 않아도 실행됨
         }
 
         System.out.println("This code must run");  // 실행3

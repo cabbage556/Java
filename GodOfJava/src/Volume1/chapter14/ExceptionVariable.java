@@ -36,9 +36,9 @@ public class ExceptionVariable {
         int[] intArr = null;
         try {
             intArr = new int[5];  // 실행 결과가 무시되지 않음
-            System.out.println(intArr[5]);  // 실행 -> 예외 발생
+            System.out.println(intArr[5]);  // 예외 발생
         } catch (Exception e) {
-            System.out.println(intArr.length);  // 5
+            System.out.println(intArr.length);  // 5: 실행 결과가 무시되지 않으므로 배열 길이가 출력됨
         }
         System.out.println("This code must run");
     }

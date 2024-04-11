@@ -10,9 +10,19 @@ public class MultiCatchSample {
         sample.multiNoCatch();
     }
 
+    /*
+    try 다음 catch 블록은 1개 이상 넣을 수 있음
+    try 블록에서 발생한 예외와 관련된 catch 블록이 실행됨
+    try 블록에서 발생한 예외와 관련된 catch 블록이 없으면 예외가 발생하며 스레드가 종료됨
+    먼저 선언한 catch 블록의 예외 클래스가 다음 catch 블록의 예외 클래스의 부모 클래스인 경우
+        자식 예외 클래스에 해당하는 catch 블록이 실행되지 않으므로 컴파일 에러 발생
+    마지막 catch 블록은 모든 예외 클래스의 부모 클래스인 Exception의 catch 블록으로 사용해 예상치 못한 예외를 처리하는 것이 좋음
+     */
+
     public void multiCatch() {
         int[] intArr = new int[5];
 
+        // catch 블록은 1개 이상 넣을 수 있음
         try {
             System.out.println(intArr[5]);  // 실행1 -> 예외 발생
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -30,13 +40,11 @@ public class MultiCatchSample {
         try {
             System.out.println(intArr[5]);
         }
-        // Exception 클래스는 모든 예외 클래스의 부모 클래스
-        // 자식 예외 클래스가 Exception 클래스 아래에서 catch하면 모든 예외를 Exception 클래스가 catch하게 됨
-        // 자식 예외 클래스가 예외를 처리할 수 없게 되므로 컴파일 에러 발생
         catch (Exception e) {
             System.out.println(intArr.length);
         }
-        // catch (ArrayIndexOutOfBoundsException e) {   // 컴파일 에러 발생
+        // 부모 예외 클래스인 Exception 클래스에 대한 catch 블록이 위에 존재하므로 컴파일 에러 발생
+        // catch (ArrayIndexOutOfBoundsException e) {
         //     System.out.println("ArrayIndexOutOfBoundsException occured");
         // }
 
@@ -50,9 +58,7 @@ public class MultiCatchSample {
             intArr = null;
             System.out.println(intArr[5]);  // NullPointerException 발생
         } catch (NullPointerException e) {
-            // 예외와 관련된 catch 블록이 실행됨
-            //      NullPointerException이 발생하므로 NullPointerException 예외를 처리하는 catch 블록이 실행됨
-            System.out.println("NullPointerException occured");  // 실행
+            System.out.println("NullPointerException occured");  // 예외와 관련된 catch 블록이 실행됨
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("ArrayIndexOutOfBoundsException occured");
         } catch (Exception e) {
@@ -70,8 +76,6 @@ public class MultiCatchSample {
             System.out.println("ArrayIndexOutOfBoundsException occured");
         }
         // Exception catch 블록은 가장 아래에 추가하는 것이 좋음
-        //      모든 예외 클래스들의 부모 클래스이므로 예상치 못한 예외를 모두 처리할 수 있게 됨
-        //      예외가 발생했을 때 처리하지 못하면 스레드가 종료되므로 중요함
         catch (Exception e) {
             System.out.println("Some exception occured");
         }
