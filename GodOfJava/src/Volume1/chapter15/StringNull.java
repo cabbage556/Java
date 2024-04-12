@@ -9,7 +9,9 @@ public class StringNull {
     }
 
     public boolean nullCheck(String text) {
-        int textLength = text.length();  // NullPointerException 예외 발생
+        // NullPointerException 예외 발생
+        //      모든 객체를 처리하기 전에 null 체크는 필수적임
+        int textLength = text.length();
         System.out.println("textLength = " + textLength);
 
         if (text == null) return true;
@@ -17,6 +19,8 @@ public class StringNull {
     }
 
     public boolean nullCheck2(String text) {
+        // 객체 null 체크
+        //      객체 처리 전에 null 체크는 필수적임
         if (text == null) {
             return true;
         } else {

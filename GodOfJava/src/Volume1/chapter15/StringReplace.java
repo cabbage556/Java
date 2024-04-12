@@ -8,7 +8,6 @@ public class StringReplace {
         // sample.checkTrim2();
         // sample.checkReplace();
         // sample.checkFormat();
-        // sample.checkFormat2();
         // sample.checkToLowerCase();
         // sample.checkToUpperCase();
         // sample.checkValueOf();
@@ -21,7 +20,7 @@ public class StringReplace {
         for (String str : strs) {
             System.out.println("[" + str + "]");
 
-            // trim() 메서드
+            // trim()
             //      문자열 앞과 뒤에 있는 모든 공백들을 제거한 뒤 리턴함
             System.out.println("[" + str.trim() + "]");
         }
@@ -29,17 +28,21 @@ public class StringReplace {
 
     public void checkTrim2() {
         String text = " a ";
+
+        // null 체크 + trim() 활용
+        //      작업하려는 문자열이 공백만으로 이뤄졌는지 아닌지 판단함
         if (text != null && text.trim().length() > 0) {
-            System.out.println("OK");
+            System.out.println("OK");  // 문자열에 공백을 제외한 char 값이 하나라도 존재하면 실행됨
         }
     }
 
     public void checkReplace() {
         String text = "The String class represents character strings";
 
-        // replace() 메서드
+        // replace로 시작하는 메서드
         //      문자열 중 일부를 대치한 뒤 리턴함
         //      기존 문자열은 변경되지 않음
+        //      대소문자를 구분함
         System.out.println(text.replace('s', 'z'));
         System.out.println(text);
         System.out.println(text.replace("tring", "trike"));
@@ -51,44 +54,43 @@ public class StringReplace {
         String text = "제 이름은 %s입니다. 지금까지 %d권의 책을 썼고, "
                 + "하루에 %f%%의 시간을 책을 쓰는 데 할애하고 있습니다.";
 
-        // format() static 메서드
-        //      정해진 기준에 맞춘 문자열을 매개 변수의 값으로 대치하는 메서드
+        // format()
+        //      정해진 기준에 맞춘 문자열이 있으면, 그 기준에 있는 내용을 매개 변수에 전달한 값으로 대치하는 메서드
         //          %s: String 타입
         //          %d: 정수 타입
         //          %f: 소수 타입
         //          java.util.Formatter 클래스에서 format 사용 방법 확인 가능
+        //      static 메서드
         String realText = String.format(text, "이상민", 7, 10.5);
         System.out.println(realText);
-    }
 
-    public void checkFormat2() {
-        String text = "제 이름은 %s입니다. 지금까지 %d권의 책을 썼고, "
-                + "하루에 %f%%의 시간을 책을 쓰는 데 할애하고 있습니다.";
-
-        // format() 메서드 사용 주의점
-        //      대치하는 문자열보다 매개 변수의 개수가 부족하면 MissingFormatArgumentException 예외 발생
-        String realText = String.format(text, "이상민", 7);
+        // format() 주의점
+        //      대치하는 문자열 개수보다 매개 변수의 개수가 부족하면 MissingFormatArgumentException 예외 발생
+        realText = String.format(text, "이상민", 7);
         System.out.println(realText);
     }
 
     public void checkToLowerCase() {
         String text = "JAVA STRING TOLOWERCASE()";
-        System.out.println(text.toLowerCase());
+        System.out.println("text = " + text);
+        System.out.println("text.toString() = " + text.toLowerCase());
     }
 
     public void checkToUpperCase() {
         String text = "java string touppercase()";
-        System.out.println(text.toUpperCase());
+        System.out.println("text = " + text);
+        System.out.println("text.toString() = " + text.toUpperCase());
     }
 
     public void checkValueOf() {
         byte b = 1;
 
-        // valueOf() static 메서드
+        // valueOf()
         //      기본 자료형의 값을 String으로 변환함
+        //      static 메서드
         String byte1 = String.valueOf(b);
 
-        // valueOf() 메서드 대신 빈문자열을 더해 String으로 변환할 수도 있음
+        // valueOf() 메서드 대신 빈 문자열을 더해 String으로 변환할 수도 있음
         String byte2 = b + "";
 
         System.out.println(byte1);
@@ -102,7 +104,7 @@ public class StringReplace {
         // System.out.println(obj.toString());
 
         // 이런 경우를 방지하기 위해 객체 출력 시 valueOf() 메서드를 사용하는 것이 좋음
-        //      null인 객체의 경우 "null" 문자열을 리턴함
+        //      valueOf() 메서드는 null인 객체의 경우 "null" 문자열을 리턴함
         System.out.println(String.valueOf(obj));
     }
 
@@ -111,7 +113,7 @@ public class StringReplace {
         String text2 = "Java Basic";
         String text3 = new String("Java Basic");
 
-        // intern() 메서드
+        // intern()
         //      new String(String)으로 생성한 String 객체일지라도 intern() 메서드를 호출하면,
         //      문자열 풀에 해당하는 문자열이 있다면 문자열 풀에 있는 문자열을 참조하는 String 객체를 리턴함
         //      만약 문자열 풀에 문자열이 존재하지 않는다면 문자열 풀에 문자열을 추가함

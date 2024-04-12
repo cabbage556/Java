@@ -7,31 +7,35 @@ public class StringExtract {
         // sample.checkCharAt();
         // sample.checkCopyValueOf();
         // sample.checkToCharArray();
-        // sample.checkSubstring();
+        sample.checkSubstring();
         sample.checkSplit();
     }
 
     public void checkCharAt() {
         String text = "java";
 
-        // charAt() 메서드
+        // charAt()
         //      특정 인덱스의 char 값을 리턴함
-        System.out.println(text.charAt(text.indexOf('j')));
-        System.out.println(text.charAt(text.indexOf('a')));
+        int jIdx = text.indexOf('j');
+        System.out.println(text.charAt(jIdx));
+
+        int aIdx = text.indexOf('a');
+        System.out.println(text.charAt(aIdx));
     }
 
     public void checkCopyValueOf() {
         char[] values = {'J', 'a', 'v', 'a'};
 
-        // copyValueOf() static 메서드
-        //      char 배열에 있는 값을 문자열로 변환함
+        // copyValueOf()
+        //      static 메서드
+        //      char 배열에 있는 값들을 문자열로 변환함
         System.out.println(String.copyValueOf(values));
     }
 
     public void checkToCharArray() {
         String text = "Java";
 
-        // toCharArray() 메서드
+        // toCharArray()
         //      문자열을 char 배열로 변환함
         char[] chArr = text.toCharArray();
         for (char c : chArr) {
@@ -42,11 +46,11 @@ public class StringExtract {
     public void checkSubstring() {
         String text = "Java technology";
 
-        // substring(int beginIndex) 메서드
+        // substring(int beginIndex)
         //      문자열을 beginIndex부터 끝까지 잘라 String으로 리턴함
         String technology = text.substring(5);
 
-        // substring(int beginIndex, int endIndex) 메서드
+        // substring(int beginIndex, int endIndex)
         //      문자열을 beginIndex부터 endIndex까지 잘라 String으로 리턴함
         String tech = text.substring(5, 9);
         System.out.println(technology);
@@ -55,6 +59,9 @@ public class StringExtract {
 
     public void checkSplit() {
         String text = "Java technology is both a programming and a platform";
+
+        // split(String regex)
+        //      정규 표현식에 맞춰 문자열을 잘라 String[]로 리턴함
         String[] splitArr = text.split(" ");
         for (String s : splitArr) {
             System.out.println(s);
