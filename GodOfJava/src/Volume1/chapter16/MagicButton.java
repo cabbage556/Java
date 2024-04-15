@@ -1,8 +1,8 @@
 package Volume1.chapter16;
 
-public class MaginButton {
+public class MagicButton {
 
-    public MaginButton() {
+    public MagicButton() {
     }
 
     private EventListener listener;

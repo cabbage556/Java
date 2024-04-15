@@ -15,6 +15,10 @@ public class NestedValueReference {
         public void setValue() {
             // static nested 클래스에서는 감싸고 있는 클래스의 클래스 변수만 참조 가능
             //      인스턴스 변수는 참조할 수 없음
+            // publicInt = 10;
+            // protectedInt = 11;
+            // justInt = 12;
+            // privateInt = 13;
             staticInt = 14;
         }
     }
