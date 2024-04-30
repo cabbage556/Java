@@ -10,6 +10,7 @@ package chapter06.singletonPattern;
         정적 속성 : 단일 객체 참조 변수
         정적 메서드 : 단일 객체 참조값 반환 메서드
         단일 객체 : 단일 객체는 공유 객체로 사용하므로 쓰기 가능한 속성을 갖지 않는 것이 정석임(읽기 전용 속성은 가능함)
+            하나의 참조 변수가 수정한 속성이 다른 참조 변수에 영향을 미칠 수 있기 때문
  */
 
 public class Singleton {
@@ -19,14 +20,14 @@ public class Singleton {
     // new를 실행해 객체를 생성할 수 없도록 생성자에 private을 붙임
     private Singleton() {}
 
-    // 유일한 단일 객체를 반환하는 정적 메서드
+    // 유일한 단일 객체의 참조값을 반환하는 정적 메서드
     public static Singleton getInstance() {
         // 정적 참조 변수에 객체가 할당되어 있지 않은 경우에만 객체를 생성해 정적 참조 변수에 할당함
         if (singletonObject == null) {
             singletonObject = new Singleton();
         }
 
-        // 정적 참조 변수에 할당된 객체 리턴
+        // 정적 참조 변수에 할당된 유일한 단일 객체의 참조값 리턴
         return singletonObject;
     }
 }

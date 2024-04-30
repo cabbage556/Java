@@ -5,6 +5,7 @@ public class Driver {
         Animal bolt = new Dog();
         Animal kitty = new Cat();
 
+        // 템플릿 메서드 호출
         bolt.playWithOwner();
         System.out.println();
         kitty.playWithOwner();

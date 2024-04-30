@@ -3,7 +3,7 @@ package chapter06.proxyPattern;
 /*
     프록시 패턴
         "제어 흐름을 조정하기 위한 목적으로 중간에 대리자(프록시)를 두는 패턴"
-            프록시 패턴은 실제 서비스 메서드의 반환값에 전혀 가감하지 않음
+        프록시 패턴은 실제 서비스 메서드의 반환값에 전혀 가감하지 않음
             실제 서비스 메서드의 반환값에 가감하는 것을 목적으로 하지 않고 제어 흐름을 변경하거나 다른 로직을 수행하기 위해 사용함
         개방 폐쇄 원칙(OCP)과 의존 역전 원칙(DIP)이 적용된 디자인 패턴
 
@@ -16,6 +16,7 @@ package chapter06.proxyPattern;
 
 // 프록시(대리자)
 //      실제 서비스 객체와 동일한 인터페이스 구현
+//      실제 서비스 객체와 동일한 이름의 메서드를 구현하게 됨
 public class Proxy implements IService {
     IService service1;
 
@@ -24,6 +25,6 @@ public class Proxy implements IService {
         System.out.println("호출에 대한 흐름 제어가 주목적. 반환 결과는 그대로 전달함");
 
         service1 = new Service();
-        return service1.runSomething();
+        return service1.runSomething();  // 실제 서비스 메서드 반환값을 그대로 전달함
     }
 }

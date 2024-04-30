@@ -6,7 +6,7 @@ public class Soldier {
     void runContext(String weaponSound) {
         System.out.println("전투 시작");
 
-        // 익명 전략 객체 생성, 전략 메서드 호출
+        // 익명 전략 객체 생성 후 전략 메서드 호출
         executeWeapon(weaponSound).runStrategy();
 
         System.out.println("전투 종료");
