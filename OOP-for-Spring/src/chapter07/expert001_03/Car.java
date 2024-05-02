@@ -8,6 +8,7 @@ public class Car {
     }
 
     // 속성을 통한 의존성 주입
+    //      생성자 대신 tire 속성 setter 메서드를 통해 Tire 객체에 대한 의존성을 주입 받음
     public void setTire(Tire tire) {
         this.tire = tire;
     }
