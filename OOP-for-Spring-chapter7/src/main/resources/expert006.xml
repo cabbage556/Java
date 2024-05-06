@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+    <context:annotation-config/>
+
+    <!--  src/main/java 기준  -->
+    <!--
+        스프링 설정 파일을 사용하는 이유
+            재컴파일, 재배포 없이 설정 파일만 변경하고 프로그램을 재구동하면 프로그램의 실행 결과가 달라지기 때문
+        여기에서는 KoreaTire 빈, AmericaTire 빈의 id 속성 값을 수정하면 Car 객체의 Tire tire 속성에 원하는 빈을 주입할 수 있음
+    -->
+    <bean id="tire" class="com.cabbage556.OOPforSpringchapter7.expert006.KoreaTire"></bean>
+    <bean id="tireOther" class="com.cabbage556.OOPforSpringchapter7.expert006.AmericaTire"></bean>
+<!--    <bean id="tire" class="com.cabbage556.OOPforSpringchapter7.expert006.Door"></bean>-->
+    <bean id="car" class="com.cabbage556.OOPforSpringchapter7.expert006.Car"></bean>
+
+</beans>
