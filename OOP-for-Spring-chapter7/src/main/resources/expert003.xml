@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--  src/main/java 기준  -->
+    <bean id="koreaTire" class="com.cabbage556.OOPforSpringchapter7.expert003.KoreaTire"></bean>
+    <bean id="americaTire" class="com.cabbage556.OOPforSpringchapter7.expert003.AmericaTire"></bean>
+    <bean id="car" class="com.cabbage556.OOPforSpringchapter7.expert003.Car">
+        <!-- car.setTire(tire) -->
+        <!-- id="koreaTire"인 bean으로 Tire 객체에 대한 의존성 주입 -->
+        <property name="tire" ref="koreaTire"></property>
+    </bean>
+
+</beans>
