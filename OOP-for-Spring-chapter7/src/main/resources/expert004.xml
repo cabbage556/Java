@@ -10,8 +10,12 @@
     <context:annotation-config/>
 
     <!--  src/main/java 기준  -->
-    <!--  id 속성의 값을 tire로 설정한 bean이 Car 객체의 tire 속성의 의존성이 됨  -->
-<!--    <bean id="tire" class="com.cabbage556.OOPforSpringchapter7.expert004.KoreaTire"></bean>-->
+    <!--
+        @Autowired를 통한 속성 매칭은 type 기준 매칭을 id 기준 매칭보다 우선시함
+        Tire 인터페이스를 구현한 클래스가 두 개이므로 id 속성을 기준으로 bean을 매칭함
+        따라서 id="tire"인 bean이 매칭되어 @Autowired를 통해 주입됨
+    -->
+    <bean id="tire" class="com.cabbage556.OOPforSpringchapter7.expert004.KoreaTire"></bean>
     <bean id="americaTire" class="com.cabbage556.OOPforSpringchapter7.expert004.AmericaTire"></bean>
     <bean id="car" class="com.cabbage556.OOPforSpringchapter7.expert004.Car"></bean>
 
