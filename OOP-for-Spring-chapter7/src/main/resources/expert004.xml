@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+    <context:annotation-config/>
+
+    <!--  src/main/java 기준  -->
+    <!--  id 속성의 값을 tire로 설정한 bean이 Car 객체의 tire 속성의 의존성이 됨  -->
+<!--    <bean id="tire" class="com.cabbage556.OOPforSpringchapter7.expert004.KoreaTire"></bean>-->
+    <bean id="americaTire" class="com.cabbage556.OOPforSpringchapter7.expert004.AmericaTire"></bean>
+    <bean id="car" class="com.cabbage556.OOPforSpringchapter7.expert004.Car"></bean>
+
+</beans>
