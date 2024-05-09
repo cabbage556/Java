@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xsi:schemaLocation="
+                    http://www.springframework.org/schema/aop
+                    http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+                    http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+    <aop:aspectj-autoproxy />
+
+    <bean id="myAspect" class="com.cabbage556.OOPforSpringchapter7.aop003.MyAspect"></bean>
+    <bean id="boy" class="com.cabbage556.OOPforSpringchapter7.aop003.Boy"></bean>
+    <bean id="girl" class="com.cabbage556.OOPforSpringchapter7.aop003.Girl"></bean>
+
+    <!--  POJO, XML 기반 AOP  -->
+    <!--  AOP 관련 태그 추가  -->
+    <!--
+        어노테이션 기반 AOP에서 사라진 어노테이션들이 AOP 관련 태그로 나타남
+            @Aspect : <aop:aspect>
+            @Before : <aop:before>
+    -->
+    <aop:config>
+        <aop:aspect ref="myAspect">
+            <aop:before method="before" pointcut="execution(* runSomething())"/>
+        </aop:aspect>
+    </aop:config>
+</beans>
