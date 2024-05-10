@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xsi:schemaLocation="
+                    http://www.springframework.org/schema/aop
+                    http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+                    http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+    <aop:aspectj-autoproxy />
+
+    <bean id="myAspect" class="com.cabbage556.OOPforSpringchapter7.aop004.MyAspect"></bean>
+    <bean id="boy" class="com.cabbage556.OOPforSpringchapter7.aop004.Boy"></bean>
+    <bean id="girl" class="com.cabbage556.OOPforSpringchapter7.aop004.Girl"></bean>
+
+    <aop:config>
+
+        <!-- advice 태그의 pointcut 속성 중복을 제거하기 위한 pointcut 태그 -->
+        <aop:pointcut id="iampc" expression="execution(* runSomething())"/>
+
+        <aop:aspect ref="myAspect">
+            <!-- Before Advice -->
+            <!-- pointcut-ref 속성을 통해 pointcut 설정  -->
+            <aop:before method="before" pointcut-ref="iampc"/>
+
+            <!-- After Advice -->
+            <!-- pointcut-ref 속성을 통해 pointcut 설정  -->
+            <aop:after method="lockDoor" pointcut-ref="iampc"/>
+        </aop:aspect>
+
+    </aop:config>
+</beans>
