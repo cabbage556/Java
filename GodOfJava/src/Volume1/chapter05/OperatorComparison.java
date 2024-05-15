@@ -19,12 +19,14 @@ public class OperatorComparison {
     }
 
     public void comparison2() {
-        // 기본 자료형의 비교
-        //      같은 종류끼리 비교 가능
-        //          숫자 타입은 숫자 타입끼리
-        //          boolean 타입은 boolean 타입끼리
-        //      다른 종류끼리 비교 불가능
-        //          숫자 타입과 boolean 타입 비교 불가능
+        /*
+            등가 비교 연산자는 모든 타입(기본 자료형, 참조 자료형)에 사용 가능함
+                - 기본 자료형은 같은 종류끼리 비교 가능
+                    - 실제 타입이 다르더라도 숫자끼리 비교 가능
+                    - boolean은 boolean끼리 비교 가능
+                - 기본 자료형은 숫자와 boolean 비교 불가능
+                - 참조 자료형은 주소값을 비교함
+         */
 
         // char 타입의 값과 int 타입의 값 비교
         char charValue = 'a';

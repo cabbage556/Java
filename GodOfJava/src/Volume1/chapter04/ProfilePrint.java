@@ -1,5 +1,6 @@
 package Volume1.chapter04;
 
+// 연습문제 : ProfilePrint 클래스 작성하기
 public class ProfilePrint {
     byte age;
     String name;

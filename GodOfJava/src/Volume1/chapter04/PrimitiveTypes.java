@@ -12,15 +12,15 @@ public class PrimitiveTypes {
     }
 
     public void checkBytes() {
-        byte byteMin = -128;  // -128: 1000_0000
-        byte byteMax = 127;   //  127: 0111_1111
+        byte byteMin = -128;
+        byte byteMax = 127;
         System.out.println("byteMin = " + byteMin);  // -128
         System.out.println("byteMax = " + byteMax);  // 127
 
-        byteMin = (byte) (byteMin - 1);  // 1000_0000 - 0000_0001
-        byteMax = (byte) (byteMax + 1);  // 0111_1111 + 0000_0001
-        System.out.println("byteMin - 1 = " + byteMin);  //  127: 0111_1111
-        System.out.println("byteMax + 1 = " + byteMax);  // -128: 1000_0000
+        byteMin = (byte) (byteMin - 1);
+        byteMax = (byte) (byteMax + 1);
+        System.out.println("byteMin - 1 = " + byteMin);  // 127
+        System.out.println("byteMax + 1 = " + byteMax);  // -128
     }
 
     public void checkOtherTypes() {
@@ -33,16 +33,16 @@ public class PrimitiveTypes {
         //      숫자에 L을 붙이지 않았을 때, 숫자가 int 범위 내에 있다면 문제가 발생하지 않지만, int 범위를 넘는다면 컴파일 에러가 발생함
         long longMax = 9_223_372_036_854_775_807L;
 
-        System.out.println("shortMax = " + shortMax);
-        System.out.println("intMax = " + intMax);
-        System.out.println("longMax = " + longMax);
+        System.out.println("shortMax = " + shortMax);   // 32767
+        System.out.println("intMax = " + intMax);       // 2147483647
+        System.out.println("longMax = " + longMax);     // 9223372036854775807
 
         shortMax = (short) (shortMax + 1);
         intMax = intMax + 1;
         longMax = (long) (longMax + 1L);
-        System.out.println("shortMax + 1 = " + shortMax);
-        System.out.println("intMax + 1 = " + intMax);
-        System.out.println("longMax + 1 = " + longMax);
+        System.out.println("shortMax + 1 = " + shortMax);   // -32768
+        System.out.println("intMax + 1 = " + intMax);       // -2147483648
+        System.out.println("longMax + 1 = " + longMax);     // -9223372036854775808
     }
 
     public void checkChar() {
@@ -52,7 +52,7 @@ public class PrimitiveTypes {
         System.out.println("charMin = [" + charMin + "]");
         System.out.println("charMax = [" + charMax + "]");
 
-        // char 타입은 정수 타입이므로 int 타입으로 형 변환 가능
+        // char 타입은 정수 타입이고, int 타입보다 범위가 작기 때문에 int 타입으로 형 변환 가능
         int intValue = 'a';
         System.out.println("intValue = [" + intValue + "]");
     }
@@ -72,8 +72,8 @@ public class PrimitiveTypes {
         System.out.println("intDefault1 = " + intDefault1);
 
         // 지역 변수 기본값
-        //      지역 변수가 기본 자료형일 경우 기본값이 지정되지 않음
-        //      지역 변수가 기본 자료형일 경우 값을 지정하지 않으면 사용할 수 없음
+        //      지역 변수가 기본 자료형일 경우 기본값이 지정되지 않고, 반드시 값을 지정해야 함
+        //      지역 변수가 기본 자료형일 경우 값을 지정하지 않고 사용하면 컴파일 에러가 발생함
         //      지역 변수를 사용하려면 반드시 초기화해야 함
         int intDefault2;
         // System.out.println("intDefault2 = " + intDefault2);
