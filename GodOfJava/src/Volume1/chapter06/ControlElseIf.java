@@ -35,7 +35,7 @@ public class ControlElseIf {
     }
 
     public void elseIf2(int point) {
-        // else if 보다 간단하지만, 가독성은 떨어지는 방식 -> switch로 개선
+        // else if 보다 간단하지만, 가독성은 떨어지는 방식 -> switch로 개선할 수 있음
         String result = point > 90 ? "A" : point > 80 ? "B" : point > 70 ? "C" : point > 60 ? "D" : "F";
         System.out.println(result);
     }

@@ -8,6 +8,7 @@ public class ControlIf {
 
     public void ifStatement() {
         // if문 소괄호 안에는 boolean 결과값이 있어야 함
+        //      if문 소괄호의 boolean 결과값이 true이면 if문의 문장들이 실행됨
         if (true);
         if (true) System.out.println("It's true");
         if (true)

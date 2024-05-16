@@ -14,6 +14,8 @@ public class ControlWhile {
         int loop = 0;
 
         // while문 소괄호 안에는 boolean 결과값이 있어야 함
+        //      boolean 결과값이 true일 경우에만 중괄호 내부 문장들이 실행됨
+        //      처음부터 boolean 결과값이 false인 경우 아예 중괄호 내부 문장들이 실행되지 않음
         while (loop < 12) {
             loop++;
             control.switchCalendar(loop);
@@ -39,7 +41,7 @@ public class ControlWhile {
             loop++;
             control.switchCalendar(loop);
             if (loop == 6) {
-                break;
+                break;  // break : 가장 가까운 반복문의 중괄호를 빠져 나감
             }
         }
     }
@@ -50,7 +52,7 @@ public class ControlWhile {
         while (loop < 12) {
             loop++;
             if (loop == 6) {
-                continue;
+                continue;  // continue : 가장 가까운 반복문의 boolean 조건으로 건너뜀
             }
             control.switchCalendar(loop);
         }

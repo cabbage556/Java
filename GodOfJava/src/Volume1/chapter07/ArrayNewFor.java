@@ -22,6 +22,9 @@ public class ArrayNewFor {
                 {1, 2, 3},
                 {4, 5, 6}
         };
+
+        // 일반적인 for 루프를 사용하는 경우 : 배열의 인덱스 정보도 필요한 경우
+        // 아래 for 루프를 사용하는 경우 : 배열의 값만 처리하는 경우
         for (int[] oneDim : twoDim) {
             for (int data : oneDim) {
                 System.out.println("data = " + data);

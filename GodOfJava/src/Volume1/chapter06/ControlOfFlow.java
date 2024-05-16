@@ -11,6 +11,7 @@ public class ControlOfFlow {
     }
 
     public void switchCalendar(int month) {
+        // break;를 사용하지 않고 switch문을 활용하는 예시
         switch (month) {
             case 1:
             case 3:

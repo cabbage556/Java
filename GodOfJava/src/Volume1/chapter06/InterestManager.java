@@ -1,5 +1,6 @@
 package Volume1.chapter06;
 
+// 연습문제 : InterestManager 클래스 작성하기
 public class InterestManager {
     public static void main(String[] args) {
         InterestManager manager = new InterestManager();

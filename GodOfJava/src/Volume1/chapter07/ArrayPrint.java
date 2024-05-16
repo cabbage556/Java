@@ -12,10 +12,10 @@ public class ArrayPrint {
 
         // 출력 결과
         // strings = [Ljava.lang.String;@66d33a
-        //      [: 객체가 배열임을 나타냄
-        //      L: 배열이 참조 자료형 배열임을 나타냄
-        //      java.lang.String: String 타입의 배열임을 나타냄
-        //      @66d33a: 객체의 고유번호를 나타냄
+        //      [ : 객체가 배열임을 나타냄
+        //      L : 배열이 참조 자료형 배열임을 나타냄
+        //      java.lang.String : String 타입의 배열임을 나타냄
+        //      @66d33a : 객체의 고유번호를 나타냄
     }
 
     public void printPrimitiveArray() {

@@ -50,7 +50,7 @@ public class ControlLabel {
         for (int i = 2; i < 10; i++) {
             for (int j = 1; j < 10; j++) {
                 if (j == 4) {
-                    continue startLabel;
+                    continue startLabel;  // startLabel 반복문의 시작점으로 이동하기
                 }
                 System.out.print(i + " * " + j + " = " + (i * j) + " ");
             }

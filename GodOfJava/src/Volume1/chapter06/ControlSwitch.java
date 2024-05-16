@@ -13,6 +13,9 @@ public class ControlSwitch {
     }
 
     public void switchStatement(int numberOfWheel) {
+        // switch문 활용 : 하나의 값이 여러 범위에 걸쳐서 비교되어야 하는 경우
+        //      break; : case 종료 시 필수 작성
+        //      default : 모든 case 조건에 맞지 않는 경우에만 실행됨
         switch (numberOfWheel) {
             case 1:
                 System.out.println(numberOfWheel + ": It is one foot bicycle");
@@ -33,6 +36,11 @@ public class ControlSwitch {
     }
 
     public void switchStatement2(int numberOfWheel) {
+        /*
+            case 1 실행 순서 : case 1 -> case 2 -> case 3
+            case 2 실행 순서 : case 2 -> case 3
+                case1, case2에 break;가 존재하지 않음
+         */
         switch (numberOfWheel) {
             case 1:
                 System.out.println(numberOfWheel + ": It is one foot bicycle");

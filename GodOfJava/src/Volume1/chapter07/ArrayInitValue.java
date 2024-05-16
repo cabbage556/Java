@@ -9,12 +9,12 @@ public class ArrayInitValue {
     }
 
     public void primitiveTypes() {
-        // 기본 자료형 배열에서 원소의 기본값은 각 자료형의 기본값과 동일함
-        // 배열의 크기만 지정하면 원소를 초기화하지 않아도 자료형에 따라 기본값이 할당됨
-        //      byte, short, int, long: 0
-        //      char: \u0000
-        //      float, double: 0.0
-        //      boolean: false
+        // 기본 자료형 배열에서 원소의 기본값 : 각 자료형의 기본값과 동일함
+        //      byte, short, int, long : 0
+        //      char : \u0000
+        //      float, double : 0.0
+        //      boolean : false
+        // 배열이 지역 변수이더라도 배열의 크기만 지정하면 원소를 초기화하지 않아도 배열 타입에 따라 원소에 기본값이 할당됨
         byte[] byteArray = new byte[1];
         short[] shortArray = new short[1];
         int[] intArray = new int[1];
@@ -35,8 +35,9 @@ public class ArrayInitValue {
     }
 
     public void referenceTypes() {
-        // 참조 자료형 배열에서 원소의 기본값은 null
-        //      null: 아무 값도 설정되어 있지 않고 초기화도 되어 있지 않은 상태
+        // 참조 자료형 배열에서 원소의 기본값 : null
+        //      null : 아무 값도 설정되어 있지 않고 초기화도 되어 있지 않은 상태
+        //      모든 참조 자료형은 초기화하지 않으면 null이 할당됨
         String[] strings = new String[2];
         ArrayInitValue[] array = new ArrayInitValue[2];
 
@@ -46,14 +47,14 @@ public class ArrayInitValue {
 
     public void referenceTypesSetValue() {
         String[] strings = new String[2];
-        strings[0] = "GodOfJava";
+        strings[0] = "GodOfJava";           // 첫 번째 원소만 초기화
 
         ArrayInitValue[] array = new ArrayInitValue[2];
-        array[0] = new ArrayInitValue();
+        array[0] = new ArrayInitValue();    // 첫 번째 원소만 초기화
 
         System.out.println("strings[0] = " + strings[0]); // GodOfJava
         System.out.println("strings[1] = " + strings[1]); // null
-        System.out.println("array[0] = " + array[0]);     // Volume1.chapter07.ArrayInitValue@... (타입이름@고유번호)
+        System.out.println("array[0] = " + array[0]);     // Volume1.chapter07.ArrayInitValue@... (타입이름@고유번호) : toString() 메서드 호출 결과
         System.out.println("array[1] = " + array[1]);     // null
     }
 }

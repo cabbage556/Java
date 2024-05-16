@@ -1,5 +1,6 @@
 package Volume1.chapter07;
 
+// 연습문제 : HeightManager 클래스 작성하기
 public class HeightManager {
     int[][] gradeHeights;
 
