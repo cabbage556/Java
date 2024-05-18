@@ -9,7 +9,7 @@ public class StaticBlockCheck {
 
     public void makeStaticBlockObject() {
         // 클래스 첫 참조 시 static 블록들이 호출됨
-        //      첫 번째 StaticBlock 객체 생성 전 static 블록들이 선언한 차례대로 호출됨
+        //      첫 번째 StaticBlock 객체 생성 전 static 블록들이 선언된 차례대로 호출됨
         System.out.println("Creating block1");
         StaticBlock block1 = new StaticBlock();
         System.out.println("Created block1");
@@ -18,6 +18,7 @@ public class StaticBlockCheck {
 
         // static 블록은 한 번 호출되면 다시 호출되지 않음
         //      두 번째 StaticBlock 객체 생성 시 static 블록들이 호출되지 않음
+        //      첫 번째 StaticBlock 객체를 생성할 때 한 번 호출되었기 때문
         System.out.println("Creating block2");
         StaticBlock block2 = new StaticBlock();
         System.out.println("Created block2");
@@ -25,7 +26,7 @@ public class StaticBlockCheck {
 
     public void makeStaticBlockObjectWithData() {
         // 클래스 첫 참조 시 static 블록들이 호출됨
-        //      static 블록들이 호출되고, StaticBlock 클래스 메서드를 호출함
+        //      static 블록들이 선언된 차례대로 호출되고, StaticBlock.getDate() 클래스 메서드를 호출함
         System.out.println("StaticBlock.data = " + StaticBlock.getData());
 
         // static 블록들이 한 번 호출되면 다시 호출되지 않음

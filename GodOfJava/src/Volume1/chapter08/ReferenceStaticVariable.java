@@ -1,7 +1,7 @@
 package Volume1.chapter08;
 
 public class ReferenceStaticVariable {
-    static String name;  // 클래스 변수: 모든 객체가 하나의 클래스 변수를 참조함
+    static String name;  // 클래스 변수 : 모든 객체가 하나의 클래스 변수를 참조함
 
     public ReferenceStaticVariable() {}
 
@@ -16,6 +16,10 @@ public class ReferenceStaticVariable {
         reference.checkName();
     }
 
+    /*
+        모든 객체는 하나의 클래스 변수를 공유한다.
+            여러 객체가 하나의 클래스 변수를 수정하다 보면 예상치 못한 상황이 발생할 수도 있으므로 주의해야 함
+     */
     public void checkName() {
         ReferenceStaticVariable reference1 = new ReferenceStaticVariable("Sangmin");
         System.out.println(reference1.name); // Sangmin
