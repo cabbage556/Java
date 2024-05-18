@@ -1,10 +1,11 @@
 package Volume1.chapter09.c.javapackage;
 
-// static 변수, 메서드를 사용하기 위해 import static을 사용하는 방법
+// static 변수, 메서드를 import 하는 방법 : import static
+//      static 변수, 메서드 자체를 import 함
 // import static Volume1.chapter09.c.javapackage.sub.SubStatic.CLASS_NAME;
 // import static Volume1.chapter09.c.javapackage.sub.SubStatic.subStaticMethod;
 
-// SubStatic 클래스의 모든 static 변수, 메서드를 한 번에 임포트하는 방법
+// import static * : 클래스가 제공하는 모든 static 변수, 메서드를 import 함
 import static Volume1.chapter09.c.javapackage.sub.SubStatic.*;
 
 public class PackageStaticImport {
