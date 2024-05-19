@@ -2,13 +2,14 @@ package Volume1.chapter10;
 
 public class ChildCasting extends ParentCasting {
     public ChildCasting() {
-        // super()
+        // super();
     }
 
     public ChildCasting(String name) {
-        // super()
+        // super();
     }
 
+    // 오버라이딩
     public void printName() {
         System.out.println("ChildCasting.printName");
     }
