@@ -4,8 +4,7 @@ public class OverTimeManager {
     public static void main(String[] args) {
         OverTimeManager manager = new OverTimeManager();
 
-        // enum 클래스의 객체 생성 방법 간단하게 이해하기
-        //      "enum 이름.상수 이름"
+        // enum 클래스의 객체 생성 방법 : enum클래스이름.상수이름
         int myAmount = manager.getOverTimeAmount(OverTimeValues.THREE_HOUR);
         System.out.println("myAmount = " + myAmount);
     }
@@ -14,7 +13,7 @@ public class OverTimeManager {
         int amount = 0;
         System.out.println("value = " + value);
 
-        // enum 클래스를 가장 효과적으로 사용하는 방법: switch문에서 사용하기
+        // enum 클래스를 가장 효과적으로 사용하는 방법 : switch문에서 사용하기
         switch (value) {
             case THREE_HOUR:
                 amount = 18000;

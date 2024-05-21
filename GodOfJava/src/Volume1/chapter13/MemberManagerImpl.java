@@ -1,19 +1,22 @@
 package Volume1.chapter13;
 
-// implements 키워드: 인터페이스를 구현한다는 의미의 키워드
-//      여러 인터페이스를 구현할 수 있음(상속은 단일 상속만 가능)
+// MemberManager 인터페이스 구현
+//      MemberManager 인터페이스의 모든 메서드를 구현해야 함
 public class MemberManagerImpl implements MemberManager {
-    // 인터페이스를 구현하는 경우 인터페이스에 선언한 메서드들을 모두 구현해야 함
+
+    // boolean addMember(MemberDTO member) 메서드 구현
     @Override
     public boolean addMember(MemberDTO member) {
         return false;
     }
 
+    // boolean removeMember(String name, String phone) 메서드 구현
     @Override
     public boolean removeMember(String name, String phone) {
         return false;
     }
 
+    // boolean updateMember(MemberDTO member) 메서드 구현
     @Override
     public boolean updateMember(MemberDTO member) {
         return false;
