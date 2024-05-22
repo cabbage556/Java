@@ -9,6 +9,7 @@ package Volume1.chapter13;
 
     Enum 클래스도 Object 클래스의 toString() 메서드를 오버라이딩함
         - enum 객체에 이 메서드를 호출하면 객체 생성 시 사용한 상수의 이름을 리턴함
+        - 필요하다면 toString() 메서드는 오버라이딩할 수 있음
 
     Enum 클래스는 compareTo() 메서드를 제공함
         - enum 클래스에 선언된 상수들의 순서를 비교해 그 차이에 해당하는 정수값을 리턴함

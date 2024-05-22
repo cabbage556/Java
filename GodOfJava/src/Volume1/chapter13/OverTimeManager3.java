@@ -6,7 +6,7 @@ public class OverTimeManager3 {
 
         /*
             values() 메서드
-                - Enum 클래스가 제공하는 특수한 static 메서드
+                - enum 클래스가 제공하는 특수한 static 메서드
                 - enum 클래스에 상수들이 선언된 순서대로 배열에 담아 리턴함
                 - 컴파일 시 자동으로 추가되는 메서드
          */
