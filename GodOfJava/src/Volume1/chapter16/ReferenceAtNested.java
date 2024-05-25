@@ -1,5 +1,12 @@
 package Volume1.chapter16;
 
+/*
+    감싸고 있는 클래스에서 참조 가능한, static nested 클래스와 내부 클래스의 변수
+        - 감싸고 있는 클래스에서 static nested 클래스와 내부 클래스의 모든 변수를 참조할 수 있음
+        - 클래스 변수 : 바로 참조 가능
+        - 인스턴스 변수 : static nested 클래스와 내부 클래스의 객체 생성 후 참조 가능
+ */
+
 public class ReferenceAtNested {
 
     // static nested 클래스

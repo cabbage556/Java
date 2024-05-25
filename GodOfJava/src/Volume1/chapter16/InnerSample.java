@@ -8,11 +8,13 @@ public class InnerSample {
     }
 
     public void makeInnerObject() {
-        // 내부 클래스의 객체를 생성하기 전에 먼저 내부 클래스를 감싸는 클래스의 객체를 생성해야 함
-        OuterOfInner outer = new OuterOfInner();
-
         // 내부 클래스의 객체 생성 방법
+        //      감싸는 클래스의 객체를 먼저 생성함
+        //      감싸는 클래스의 객체를 통해 내부 클래스의 객체를 생성함
+        OuterOfInner outer = new OuterOfInner();
         OuterOfInner.Inner inner = outer.new Inner();
+
+        // 객체 사용 방법은 일반 객체 사용 방법과 동일함
         inner.setValue(3);
         System.out.println(inner.getValue());
     }

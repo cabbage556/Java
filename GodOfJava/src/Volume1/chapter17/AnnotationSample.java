@@ -10,18 +10,20 @@ public class AnnotationSample {
     public void useDeprecated() {
         AnnotationDeprecated deprecated = new AnnotationDeprecated();
 
-        // noMoreUse() 메서드가 deprecated 되었다는 경고 메시지를 확인할 수 있음
+        // deprecated 경고를 확인할 수 있음
         deprecated.noMoreUse();
     }
 
-    // @SupressWarings 어노테이션
-    //      컴파일러에게 경고하지 말라고 지정함
-    //      이 경우에는 컴파일러에게 Deprecated와 관련된 경고를 하지 말라고 지정함
-    @SuppressWarnings("deprecation")
+    /*
+        @SupressWarnings 어노테이션
+            - 컴파일러에게 경고를 띄우지 말라고 선언하는 어노테이션
+     */
+
+    @SuppressWarnings("deprecation")  // 이 경우 컴파일러에게 Deprecated 경고를 띄우지 말라고 지정함
     public void useDeprecated2() {
         AnnotationDeprecated deprecated = new AnnotationDeprecated();
 
-        // noMoreUse() 메서드에 @Deprecated 어노테이션이 선언되어 있지만 경고 메시지가 나오지 않음
+        // deprecated 경고가 나오지 않음
         deprecated.noMoreUse();
     }
 }
