@@ -1,5 +1,27 @@
 package Volume1.chapter15;
 
+/*
+    특정 조건에 맞는 문자열이 있는지 확인하는 메서드
+    startsWith() 메서드
+        - 문자열이 매개 변수에 전달한 문자열로 시작하는지 확인하는 메서드
+    endsWith() 메서드
+        - 문자열이 매개 변수에 전달한 문자열로 끝나는지 확인하는 메서드
+    contains() 메서드
+        - 문자열에 매개 변수에 전달한 문자열이 존재하는지 확인하는 메서드
+    matches() 메서드
+        - 문자열에 매개 변수로 전달한 값(정규 표현식)이 존재하는지 확인하는 메서드
+        - JDK 1.4부터 정규 표현식 제공
+        - java.util.regex 패키지의 Pattern 클래스 API에서 확인
+    regionMathces(boolean ignoreCase, int toffset, String other, int ooffset, int len) 메서드
+        - 문자열 중에서 특정 영역이 매개 변수로 전달한 문자열과 동일한지 확인하는 메서드
+        - 매개 변수의 의미
+            - ignoreCase : true인 경우 대소문자를 구분하지 않음
+            - toffset : 호출한 String 객체의 확인 시작 위치
+            - other : 존재하는지 확인할 문자열
+            - ooffset : other 객체의 확인 시작 위치
+            - len : 비교할 char 갯수
+ */
+
 public class StringCheck {
 
     public static void main(String[] args) {
@@ -10,8 +32,8 @@ public class StringCheck {
                 "경기도 성남시 분당구 정자동 개발 공장",
                 "서울시 구로구 개봉동"
         };
-        // sample.checkAddress(addresses);
-        // sample.containsAddress(addresses);
+        sample.checkAddress(addresses);
+        sample.containsAddress(addresses);
         sample.checkMatch();
     }
 
@@ -21,14 +43,9 @@ public class StringCheck {
         String endText = "동";
 
         for (String address : addresses) {
-            // startsWith()
-            //      문자열이 매개 변수로 전달한 문자열로 시작하는지 확인하는 메서드
             if (address.startsWith(startText)) {
                 startCount++;
             }
-
-            // endsWith()
-            //      문자열이 매개 변수로 전달한 문자열로 끝나는지 확인하는 메서드
             if (address.endsWith(endText)) {
                 endCount++;
             }
@@ -43,8 +60,6 @@ public class StringCheck {
         String containText = "구로";
 
         for (String address : addresses) {
-            // contains()
-            //      문자열에 매개 변수로 전달한 문자열이 존재하는지 확인하는 메서드
             if (address.contains(containText)) {
                 containCount++;
             }
@@ -57,14 +72,6 @@ public class StringCheck {
         String compare1 = "is";
         String compare2 = "this";
 
-        // regionMatches()
-        //      문자열의 특정 영역이 매개 변수로 전달한 문자열과 동일한지 확인하는 메서드
-        //          ignoreCase: true인 경우 대소문자를 구분하지 않음
-        //          toffset: 비교 대상 문자열(호출 String 객체)의 확인 시작 위치
-        //          other: 존재하는지 확인할 문자열(매개 변수로 전달한 String 객체)
-        //          ooffset: other 객체의 확인 시작 위치
-        //          len: 비교할 char 개수
-        
         // text의 2번 인덱스부터의 문자열과 compare1의 0번 인덱스부터의 문자열을 1글자만 비교
         System.out.println(text.regionMatches(2, compare1, 0, 1));
 
